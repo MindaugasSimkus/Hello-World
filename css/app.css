@@ -35,3 +35,19 @@ a:active {
     background-color: transparent;
     text-decoration: underline;
 }
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align:center;
+    padding: 5px;
+}
+
+th {
+    background-color:rgba(51, 153, 51, 0.4);
+    font-family: verdana;
+}
+}
+td {
+    background-color:#9fdf9f;
+    font-family: verdana;
+}
