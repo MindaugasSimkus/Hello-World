@@ -9,7 +9,7 @@ p {
 		color:black;
 		font-family: verdana;
     	font-size: 16px;
-    	border: 1px solid powderblue;
+        text-align:center; 
    	    
 		}
 a:link {
@@ -50,4 +50,7 @@ th {
 td {
     background-color:#9fdf9f;
     font-family: verdana;
+}
+img {
+    align-content: : center;
 }
