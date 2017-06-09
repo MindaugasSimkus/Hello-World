@@ -1,17 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700');
+
 body {
-		background-color:lightyellow;
-		}
+	background-color:lightyellow;
+    font-family: 'Open Sans', sans-serif;
+}
+
 h1 {
-		color:orange;
-		text-align:center; 
-		}
+	color:orange;
+	text-align:center; 
+}
+
 p {
-		color:black;
-		font-family: verdana;
-    	font-size: 16px;
-        text-align:center; 
-   	    
-		}
+    font-size: 16px;
+    text-align:center; 
+}
+
 a:link {
     color: green; 
     background-color: transparent; 
@@ -19,7 +22,7 @@ a:link {
 }
 
 a:visited {
-    color: pink;
+    color: blue;
     background-color: transparent;
     text-decoration: none;
 }
@@ -31,10 +34,11 @@ a:hover {
 }
 
 a:active {
-    color: yellow;
+    color: green;
     background-color: transparent;
     text-decoration: underline;
 }
+
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -44,13 +48,11 @@ table, th, td {
 
 th {
     background-color:rgba(51, 153, 51, 0.4);
-    font-family: verdana;
+    color: red;
 }
+
 }
-td {
+table#t1 tr {
     background-color:#9fdf9f;
-    font-family: verdana;
-}
-img {
-    align-content: : center;
+    color: red;
 }
