@@ -36,7 +36,15 @@ ul#meniu li a:hover {
 nav {
     background-color: powderblue;
     float: left;
-    max-width: 160px;
+    max-width: 224px;
+    height: 500px;
+    margin: 0;
+    padding: 1em;
+}
+.video {
+    background-color: powderblue;
+    float: right;
+    max-width: 800px;
     height: 500px;
     margin: 0;
     padding: 1em;
