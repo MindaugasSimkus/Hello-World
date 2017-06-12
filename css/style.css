@@ -1,12 +1,23 @@
+body {
+  width: 1024px;
+  background-color:lightyellow;
+}
+div#images {
+  width: 1024px;
+  float:left;
+  background-color: red;
+}
+p {
+  text-align: center;
+}
 ul#meniu {
+  width: 1024px;
   list-style-type:none;
-  margin:0;
-  padding:0;
   overflow:hidden;
   background-color:#ccccff;
 }
 ul#meniu li {
-
+     float:left;
 }
 ul#meniu li a {
   display:block;
@@ -17,4 +28,16 @@ ul#meniu li a {
 }
 ul#meniu li a:hover {
   background-color:#8080ff;
+}
+.newspaper {
+  column-count:3;
+  width: 1024 px;
+}
+nav {
+    background-color: powderblue;
+    float: left;
+    max-width: 160px;
+    height: 500px;
+    margin: 0;
+    padding: 1em;
 }
