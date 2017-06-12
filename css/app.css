@@ -49,3 +49,23 @@ th {
 table {
     width:80%;
 }
+ul#l1 {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	background-color:#ccccff;
+}
+ul#l1 li {
+	float:left;
+}
+ul#l1 li a {
+	display:block;
+	color: black;
+	text-align: center;
+	padding: 16px;
+	text-decoration:none;
+}
+ul#l1 li a:hover {
+	background-color:#8080ff;
+}
