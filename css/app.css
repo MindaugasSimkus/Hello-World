@@ -1,16 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700');
+
 body {
-	background-color:lightyellow;
+ 	background-color:lightyellow;
     font-family: 'Open Sans', sans-serif;
     color: green;
+    transition: width 2s;
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        background-color: powderblue;
+    }
 }
 h1 {
 	color:orange;
 	text-align:center; 
 }
 p {
-<<<<<<< HEAD
-		color:gold;
+		color:green;
+		text-align:center;
 		font-family: verdana;
     	font-size: 16px; 
 }
@@ -71,4 +79,5 @@ ul#l1 li a {
 ul#l1 li a:hover {
 	background-color:#8080ff;
 }
->>>>>>> 64eb28023fab5792cd845b70ef23d058cdeccd19
+
+
