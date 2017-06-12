@@ -1,5 +1,4 @@
 body {
-  width: 1024px;
   background-color:lightyellow;
 }
 div#images {
@@ -11,7 +10,7 @@ p {
   text-align: center;
 }
 ul#meniu {
-  width: 1024px;
+  width: 350px;
   list-style-type:none;
   overflow:hidden;
   background-color:#ccccff;
@@ -48,4 +47,26 @@ nav {
     height: 500px;
     margin: 0;
     padding: 1em;
+}
+.lorem {
+    background-color: powderblue;
+    float: left;
+    max-width: 320px;
+    height: 500px;
+    margin: 0;
+    padding: 1em;
+}
+.pictures4 {
+    background-color: powderblue;
+    float: right;
+    max-width: 620px;
+    height: 500px;
+    margin: 0;
+    padding: 1em;
+}
+.body {
+  max-width: 1024px;
+  background-color: #ffe6e6;
+  margin: 20px;
+  padding: 20px;
 }
