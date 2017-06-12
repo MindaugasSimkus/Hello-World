@@ -1,58 +1,51 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700');
-
 body {
 	background-color:lightyellow;
     font-family: 'Open Sans', sans-serif;
+    color: green;
 }
-
 h1 {
 	color:orange;
 	text-align:center; 
 }
-
 p {
     font-size: 16px;
     text-align:center; 
 }
-
 a:link {
-    color: green; 
+    color: green;
     background-color: transparent; 
     text-decoration: none;
 }
-
 a:visited {
     color: blue;
     background-color: transparent;
     text-decoration: none;
 }
-
 a:hover {
     color: red;
     background-color: transparent;
     text-decoration: underline;
 }
-
 a:active {
     color: green;
     background-color: transparent;
     text-decoration: underline;
 }
-
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     text-align:center;
     padding: 5px;
 }
-
 th {
     background-color:rgba(51, 153, 51, 0.4);
     color: red;
 }
-
+ table#t1 td {
+    background-color:#e6ffe6;
+    color:black;
 }
-table#t1 tr {
-    background-color:#9fdf9f;
-    color: red;
+table {
+    width:80%;
 }
