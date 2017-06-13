@@ -1,41 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Glegoo:400,700');
 body {
-  background-color:lightyellow;
-}
-div#images {
-  width: 1024px;
-  float:left;
-  background-color: red;
+  background-image: url("../images/hoplite_background.gif");
+  font-family: 'Glegoo', serif;
+  font-size: 12px;
+  color:black;
 }
 p {
   text-align: center;
 }
-ul#meniu {
-  width: 350px;
-  list-style-type:none;
-  overflow:hidden;
-  background-color:#ccccff;
+#images {
+  background-color: transparent;
+  padding:10px;
+  max-width: 1024px;
+  position:relative;
 }
-ul#meniu li {
-     float:left;
+#nav {
+  text-align:center;
+  background-color:transparent;
+  padding-bottom:0px;
 }
-ul#meniu li a {
-  display:block;
-  color: black;
-  text-align: center;
-  padding: 16px;
-  text-decoration:none;
+#nav ul {
+  display:inline-block;
+  list-style:none; 
+  margin:auto;
+  padding: auto;
 }
-ul#meniu li a:hover {
+#nav li {
+  display:inline-block;
+}
+#nav a {
+  border-style: outset;
+  float:left;
+  text-decoration:none; 
+  color:black;
+  padding:10px;
+}
+#nav a:hover {
   background-color:#8080ff;
+}
+#nav a:active {
+  color:silver;
 }
 .newspaper {
   column-count:3;
-  width: 1024 px;
+  max-width: 1024px;
+  padding: 10px;
 }
-nav {
+.list {
     background-color: powderblue;
     float: left;
-    max-width: 224px;
+    width: 124px;
     height: 500px;
     margin: 0;
     padding: 1em;
@@ -43,7 +57,7 @@ nav {
 .video {
     background-color: powderblue;
     float: right;
-    max-width: 800px;
+    width: 800px;
     height: 500px;
     margin: 0;
     padding: 1em;
@@ -66,7 +80,7 @@ nav {
 }
 .body {
   max-width: 1024px;
-  background-color: #ffe6e6;
-  margin: 20px;
-  padding: 20px;
+  background-color: transparent;
+  margin: auto;
+  padding:auto;
 }
