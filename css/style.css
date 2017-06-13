@@ -1,6 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Glegoo:400,700');
-body {
+body#hoplite {
   background-image: url("../images/hoplite_background.gif");
+  font-family: 'Glegoo', serif;
+  font-size: 12px;
+  color:black;
+}
+body#music {
+  background-image: url("../images/music.gif");
+  font-family: 'Glegoo', serif;
+  font-size: 12px;
+  color:black;
+}
+body#movie {
+  background-image: url("../images/movie.gif");
+  background-repeat: repeat-x;
   font-family: 'Glegoo', serif;
   font-size: 12px;
   color:black;
@@ -62,7 +75,8 @@ h3 {
 }
 /* 2nd page */
 .list {
-    background-color: rgba(200,200,200,0.5);
+    background-color: silver;
+    font-weight: bold;
     width: 124px;
     height: 500px;
     padding: 10px;
@@ -79,18 +93,19 @@ h3 {
 }
 /* 3rd page */
 .lorem {
-    background-color: powderblue;
-    float: left;
-    max-width: 320px;
+    background-color: grey;
+    color:white;
+    width: 320px;
     height: 500px;
-    margin: 0;
-    padding: 1em;
+    padding: 10px;
+    position: relative;
 }
 .pictures4 {
-    background-color: powderblue;
-    float: right;
-    max-width: 620px;
+    background-color: rgba(200,200,200,0.5);
+    width: 620px;
     height: 500px;
-    margin: 0;
-    padding: 1em;
+    padding: 10px;
+    position:absolute;
+    bottom:0;
+    left:384px;
 }
