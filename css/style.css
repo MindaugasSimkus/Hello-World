@@ -8,16 +8,21 @@ body {
 p {
   text-align: center;
 }
-#images {
-  background-color: transparent;
-  padding:10px;
-  max-width: 1024px;
-  position:relative;
+h3 {
+  text-align: center;
 }
+.body {
+  max-width: 1024px;
+  background-color: transparent;
+  margin: auto;
+  padding:auto;
+}
+/* page links */
 #nav {
   text-align:center;
   background-color:transparent;
-  padding-bottom:0px;
+  padding:5px;
+  margin:auto;
 }
 #nav ul {
   display:inline-block;
@@ -41,27 +46,37 @@ p {
 #nav a:active {
   color:silver;
 }
+/* 1st page */
 .newspaper {
+  background-color:white;
   column-count:3;
   max-width: 1024px;
   padding: 10px;
 }
+#images {
+  background-color: rgba(200,200,200, 0.5);
+  padding:10px;
+  max-width: 1024px;
+  position:relative;
+}
+/* 2nd page */
 .list {
     background-color: powderblue;
-    float: left;
     width: 124px;
     height: 500px;
     margin: 0;
-    padding: 1em;
+    padding: 10px;
+    float: left;
 }
 .video {
     background-color: powderblue;
-    float: right;
     width: 800px;
     height: 500px;
-    margin: 0;
-    padding: 1em;
+    margin: auto;
+    padding: 10px;
+    float:right;
 }
+/* 3rd page */
 .lorem {
     background-color: powderblue;
     float: left;
@@ -77,10 +92,4 @@ p {
     height: 500px;
     margin: 0;
     padding: 1em;
-}
-.body {
-  max-width: 1024px;
-  background-color: transparent;
-  margin: auto;
-  padding:auto;
 }
