@@ -39,32 +39,32 @@ h3 {
   position:relative;
 }
 /* page links */
-#nav {
+.nav {
   text-align:center;
   background-color:transparent;
   padding:5px;
   margin:auto;
 }
-#nav ul {
+.nav ul {
   display:inline-block;
   list-style:none; 
   margin:auto;
   padding: auto;
 }
-#nav li {
+.nav li {
   display:inline-block;
 }
-#nav a {
+.nav a {
   border-style: outset;
   float:left;
   text-decoration:none; 
   color:black;
   padding:10px;
 }
-#nav a:hover {
+.nav a:hover {
   background-color:#8080ff;
 }
-#nav a:active {
+.nav a:active {
   color:silver;
 }
 /* 1st page */
@@ -84,19 +84,11 @@ h3 {
 .list {
     background-color: silver;
     font-weight: bold;
-    width: 124px;
-    height: 500px;
     padding: 10px;
-    position: relative;
 }
 .video {
     background-color: rgba(200,200,200,0.5);
-    width: 800px;
-    height: 500px;
     padding: 10px;
-    position:absolute;
-    bottom:0;
-    left:204px;
 }
 /* 3rd page */
 .lorem {
