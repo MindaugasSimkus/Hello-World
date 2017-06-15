@@ -34,13 +34,6 @@ p {
 h3 {
   text-align: center;
 }
-.body {
-  max-width: 1024px;
-  background-color: transparent;
-  margin: auto;
-  padding:auto;
-  position:relative;
-}
 /* page links */
 .nav {
   text-align:center;
@@ -94,17 +87,11 @@ h3 {
 .lorem {
     background-color: grey;
     color:white;
-    width: 320px;
-    height: 500px;
     padding: 10px;
-    position: relative;
 }
 .pictures4 {
     background-color: rgba(200,200,200,0.5);
-    width: 620px;
-    height: 500px;
-    padding: 10px;
-    position:absolute;
-    bottom:0;
-    left:384px;
+}
+.picture2 {
+  padding:5px;
 }
