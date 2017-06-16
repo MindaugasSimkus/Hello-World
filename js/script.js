@@ -7,8 +7,8 @@ function neteisingai() {
     alert("Išmok skaičiuot");
 }
 function teisingai2() {
-   console.log("Buvo atsakyta teisingai.")
+   console.log("Buvo atsakyta teisingai.");
 }
 function neteisingai2() {
-    console.log("Buvo atsakyta neteisingai.")
+    console.log("Buvo atsakyta neteisingai.");
 }

@@ -54,11 +54,44 @@
           <h1>Kiek bus du plius du?</h1>
         </div>
 
+        <h1>Uzkandziai</h1>
+        <div id="uzkandziai" style="padding: 25px; background-color: gray; color:white">
+          Prekes nera
+        </div>
+        <h1>Gerimai</h1>
+        <div id="gerimai" style="padding: 25px; background-color: gray; color:white">
+          Prekes nera
+        </div>        
+
 
         <button onclick="teisingai2()">Keturi</button>
 
         <button onclick="neteisingai2()">Penki</button>
+        <br/>
 
+        <button onclick="parodyk_preke2(1, 'uzkandziai')">Parodyk preke 1</button>
+        <button onclick="parodyk_preke2(2, 'uzkandziai')">Parodyk preke 2</button>
+        <button onclick="parodyk_preke2(3, 'gerimai')">Parodyk preke 3</button>
+        <button onclick="parodyk_preke2(4, 'gerimai')">Parodyk preke 4</button>
+
+        <script>
+        //function parodyk_preke() { //prekes parodymas
+         // var prekes_pavadinimas = "saldainis";
+         // var prekes_kaina = 1;
+         // var pristatymo_mokestis = 20;
+         // var visa_kaina = prekes_kaina + pristatymo_mokestis;
+         // var sudetis = ["cukrus", "sokoladas", "riesutai"];
+        //  document.getElementById('preke').innerHTML = prekes_pavadinimas;
+         // document.write("<br/> visa kaina" + visa_kaina);
+          //document.write("<br/> sudetyje yra: " + sudetis[1]);
+       // }
+
+        function parodyk_preke2(numeris, sarasas) { //prekes parodymas
+          var prekes = ['desra', 'duona', 'alus', 'vanduo'];
+          document.getElementById(sarasas).innerHTML = prekes[--numeris];
+        }
+
+        </script>
 
         </div>
 
