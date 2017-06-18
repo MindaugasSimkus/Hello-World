@@ -13,10 +13,12 @@ function neteisingai2() {
     console.log("Buvo atsakyta neteisingai.");
 } // HOMEWORK FUNCTIONS
 function rand(){ // function for painting random cell of the table
+	clickcounter();
 	white();
 	var tabledata = ['first-cell', 'second-cell', 'third-cell', 'fourth-cell', 'fifth-cell', 'sixth-cell', 'seventh-cell', 'eighth-cell', 'ninth-cell'];
 	var y = Math.floor(Math.random() * 9);
-	document.getElementById('atsitiktinis_skaicius').innerHTML ='Atsitiktinis langelis: <br/>' + tabledata[y]; 
+	var z = y+1;
+	document.getElementById('atsitiktinis_skaicius').innerHTML ='Žalias langelis: ' + z; 
 	document.getElementById(tabledata[y]).style.backgroundColor = "green";
 }
 function white() { // paints all cells in white
@@ -25,32 +27,37 @@ function white() { // paints all cells in white
 		document.getElementById(tabledata[i]).style.backgroundColor = "white";
 	}
 }
-function findgreencell() {
+function findgreencell() { // finds green cell
 	var tabledata = ['first-cell', 'second-cell', 'third-cell', 'fourth-cell', 'fifth-cell', 'sixth-cell', 'seventh-cell', 'eighth-cell', 'ninth-cell'];
-	var i=0;
+	var i = 0;
 	document.getElementById(tabledata[i]).style.backgroundColor;
 	while (document.getElementById(tabledata[i]).style.backgroundColor == 'white') {
 		i++;
 	}
 	var green_cell_index = i;
-	document.getElementById('zaliacele').innerHTML ='Zalio langelio numeris: ' + green_cell_index;
-	return green_cell_index;
-}
+	var j = green_cell_index + 1;
+	return [green_cell_index, j];
+} // click counter to know when the page is loaded for the first time
+var clicks = 0;
+function clickcounter() {
+	clicks = ++clicks;
+	return clicks;
+} // paints following cell in green
 function sequence() {
 	var tabledata = ['first-cell', 'second-cell', 'third-cell', 'fourth-cell', 'fifth-cell', 'sixth-cell', 'seventh-cell', 'eighth-cell', 'ninth-cell'];
-	var i = findgreencell();
-
-	document.getElementById('spalva').innerHTML ='Zalio langelio numeris: ' + i;
-	if (i == 0) {
-		document.getElementById(tabledata[++i]).style.backgroundColor = "green";		
+	var a = findgreencell()[0];
+	var b = findgreencell()[1];
+	var c = clickcounter();
+	if (a <= 7 && (c > 1)) {
+		var f = b + 1;
+		document.getElementById(tabledata[a]).style.backgroundColor = "white";
+		document.getElementById(tabledata[b]).style.backgroundColor = "green";
+		document.getElementById('atsitiktinis_skaicius').innerHTML ='Žalias langelis: ' + f;
 	} else {
-		if (i <= 8) {
-			document.getElementById(tabledata[i]).style.backgroundColor = "white";
-			document.getElementById(tabledata[++i]).style.backgroundColor = "green";
-		} else if (i == 0) {
-			document.getElementById(tabledata[i]).style.backgroundColor = "green";
-		} else {
-			i = 0;
-		}
-	}
+		white()
+		var d = 0;
+		var e = d + 1;
+		document.getElementById(tabledata[d]).style.backgroundColor = "green";
+		document.getElementById('atsitiktinis_skaicius').innerHTML ='Žalias langelis: ' + e;
+	} 
 }
