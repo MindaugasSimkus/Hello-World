@@ -11,7 +11,8 @@ function teisingai2() {
 }
 function neteisingai2() {
     console.log("Buvo atsakyta neteisingai.");
-} // HOMEWORK FUNCTIONS
+}
+// HOMEWORK FUNCTIONS
 function rand(){ // function for painting random cell of the table
 	clickcounter();
 	white();
