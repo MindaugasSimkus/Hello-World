@@ -116,3 +116,24 @@ h3 {
 .tablecss2 {
   margin:0 auto;
 }
+.laims {
+  font-size: 150px;
+  width:200px;
+  height:200px;
+  background-color: yellow;
+}
+.saras {
+  text-align:center;
+  background-color:transparent;
+  padding:5px;
+  margin:auto;
+}
+.saras ul {
+  display:inline-block;
+  list-style:none; 
+  margin:auto;
+  padding: auto;
+}
+.saras li {
+  display:inline-block;
+}

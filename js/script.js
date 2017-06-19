@@ -93,28 +93,39 @@ function sequence2() { // paints following cell in green
 }
 // homework in class
 var cell = 0;
+var skaiciu_eile = [];
 function random_cell() {
-	cell = Math.floor((Math.random()*9) + 1);
-	for (a=1; a<=9; ++a) {
-			document.getElementById(a).style.backgroundColor = "gray";
+	cell = Math.floor(Math.random()*10);
+	for (a=0; a<=9; ++a) {
+			document.getElementById(a).style.backgroundColor = "powderblue";
 	}
 	document.getElementById(cell).style.backgroundColor = random_color();
+	document.getElementById('laimingas_skaicius').innerHTML = cell;
+	var numeris = document.getElementById("numeris");
+	numeris.style.backgroundColor = random_color();
+
+	 var sarasas = document.getElementById("sarasas");
+	 skaiciu_eile.push(cell);
+	 sarasas.innerHTML = skaiciu_eile;
 }
 function next_cell() {
 	if (cell >= 9) {
-		cell = 1;
+		cell = 0;
 	} else {
 		cell = cell + 1;
 	}
-	for (a=1; a<=9; ++a) {
-			document.getElementById(a).style.backgroundColor = "gray";
+	for (a=0; a<=9; ++a) {
+			document.getElementById(a).style.backgroundColor = "powderblue";
 	}
 	document.getElementById(cell).style.backgroundColor = random_color();
+	document.getElementById('laimingas_skaicius').innerHTML = cell;
 }
 function random_color() {
-	var a = Math.floor(Math.random()*255);
-	var b = Math.floor(Math.random()*255);
-	var c = Math.floor(Math.random()*255);
+	var a = Math.floor(Math.random()*256);
+	var b = Math.floor(Math.random()*256);
+	var c = Math.floor(Math.random()*256);
 
 	return ["rgb(",a,",",b,",",c,")"].join("");
 }
+//namie max 6 sk gali iskrist ir iskritus 6 skaiciams turi matytis pranesimas, jog zaidimas baigas. Viskas bootsrap'e. 
+//Dar mygtukas "naujas zaidimas". paspaudus naujas zaidimas, turi susigeneruot naujas bilieto numeris is 6sk. (laimingi skaiciai)  ir juos islaiko iki zaidimo pabaigos.
