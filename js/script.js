@@ -84,10 +84,30 @@ function sequence2() { // paints following cell in green
 		document.getElementById('atsitiktinis_skaicius2').innerHTML ='Žalias langelis: ' + a;
 		return zalias_langelis = a;
 	} else {
-		white2()
+		white2();
 		var d = 1;
 		document.getElementById(d).style.backgroundColor = "green";
 		document.getElementById('atsitiktinis_skaicius2').innerHTML ='Žalias langelis: ' + d;
 		return zalias_langelis = d;
 	} 
+}
+// homework in class
+var cell = 0;
+function random_cell() {
+	cell = Math.floor((Math.random()*9) + 1);
+	for (a=1; a<=9; ++a) {
+			document.getElementById(a).style.backgroundColor = "gray";
+	}
+	document.getElementById(cell).style.backgroundColor = "blue";
+}
+function next_cell() {
+	if (cell >= 9) {
+		cell = 1;
+	} else {
+		cell = cell + 1;
+	}
+	for (a=1; a<=9; ++a) {
+			document.getElementById(a).style.backgroundColor = "gray";
+	}
+	document.getElementById(cell).style.backgroundColor = "blue";
 }
