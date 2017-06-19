@@ -61,3 +61,32 @@ function sequence() {
 		document.getElementById('atsitiktinis_skaicius').innerHTML ='Žalias langelis: ' + e;
 	} 
 }
+// HOMEWORK FUNCTIONS variant 2
+var zalias_langelis = 0;
+function rand2(){ // function for painting random cell of the table
+	white2();
+	zalias_langelis = Math.floor((Math.random() * 9) + 1);
+	document.getElementById('atsitiktinis_skaicius2').innerHTML ='Žalias langelis: ' + zalias_langelis; 
+	document.getElementById(zalias_langelis).style.backgroundColor = "green";
+	return zalias_langelis;
+}
+function white2() { // paints all cells in white
+	for (var i = 1; i <= 9; i++) {
+		document.getElementById(i).style.backgroundColor = "white";
+	}
+}
+function sequence2() { // paints following cell in green
+	var a = zalias_langelis + 1;
+	if (a <= 9 && (zalias_langelis !== 0)) {
+		document.getElementById(zalias_langelis).style.backgroundColor = "white";
+		document.getElementById(a).style.backgroundColor = "green";
+		document.getElementById('atsitiktinis_skaicius2').innerHTML ='Žalias langelis: ' + a;
+		return zalias_langelis = a;
+	} else {
+		white2()
+		var d = 1;
+		document.getElementById(d).style.backgroundColor = "green";
+		document.getElementById('atsitiktinis_skaicius2').innerHTML ='Žalias langelis: ' + d;
+		return zalias_langelis = d;
+	} 
+}

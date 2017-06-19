@@ -107,3 +107,12 @@ h3 {
 .centerblock {
   text-align: center;
 }
+.jstable2 td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100px;
+  height: 100px;
+}
+.tablecss2 {
+  margin:0 auto;
+}
