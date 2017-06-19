@@ -98,7 +98,7 @@ function random_cell() {
 	for (a=1; a<=9; ++a) {
 			document.getElementById(a).style.backgroundColor = "gray";
 	}
-	document.getElementById(cell).style.backgroundColor = "blue";
+	document.getElementById(cell).style.backgroundColor = random_color();
 }
 function next_cell() {
 	if (cell >= 9) {
@@ -109,5 +109,12 @@ function next_cell() {
 	for (a=1; a<=9; ++a) {
 			document.getElementById(a).style.backgroundColor = "gray";
 	}
-	document.getElementById(cell).style.backgroundColor = "blue";
+	document.getElementById(cell).style.backgroundColor = random_color();
+}
+function random_color() {
+	var a = Math.floor(Math.random()*255);
+	var b = Math.floor(Math.random()*255);
+	var c = Math.floor(Math.random()*255);
+
+	return ["rgb(",a,",",b,",",c,")"].join("");
 }
