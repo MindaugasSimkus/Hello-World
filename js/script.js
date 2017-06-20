@@ -91,34 +91,116 @@ function sequence2() { // paints following cell in green
 		return zalias_langelis = d;
 	} 
 }
-// homework in class
+// homework slot machine
 var cell = 0;
+var sk = 0;
 var skaiciu_eile = [];
-function random_cell() {
-	cell = Math.floor(Math.random()*10);
-	for (a=0; a<=9; ++a) {
-			document.getElementById(a).style.backgroundColor = "powderblue";
-	}
-	document.getElementById(cell).style.backgroundColor = random_color();
-	document.getElementById('laimingas_skaicius').innerHTML = cell;
-	var numeris = document.getElementById("numeris");
-	numeris.style.backgroundColor = random_color();
+var skaiciu_eile2 = [];
+var kamuoliukas = 0;
+var bilieto_skaicius = 0;
+var hidden = true;
+var hidden2 = true;
 
-	 var sarasas = document.getElementById("sarasas");
-	 skaiciu_eile.push(cell);
-	 sarasas.innerHTML = skaiciu_eile;
-}
-function next_cell() {
-	if (cell >= 9) {
-		cell = 0;
+function hide_button() {
+	if (hidden) {
+		document.getElementById('ridenimas').style.visibility = 'hidden';
 	} else {
-		cell = cell + 1;
+		document.getElementById('ridenimas').style.visibility = 'visible';
 	}
-	for (a=0; a<=9; ++a) {
+}
+
+function hide_cheat_mode() {
+	if (hidden2) {
+		document.getElementById('cheater').style.visibility = 'hidden';
+	} else {
+		document.getElementById('cheater').style.visibility = 'visible';
+	}
+}
+
+function kamuoliuko_nr() {
+	kamuoliukas = ++kamuoliukas;
+	return kamuoliukas;
+}
+
+function generatorius() {
+	cell = Math.floor(Math.random()*10);
+	return cell;
+}
+
+function generatorius_sk() {
+	sk = Math.floor(Math.random()*10);
+	return sk;
+}
+
+function bilieto_generatorius() {
+
+	for (bilieto_skaicius; bilieto_skaicius < 6; bilieto_skaicius++) {
+		generatorius_sk();
+		var skaicius_biliete = bilieto_skaicius+201;
+		var irasymas = document.getElementById(skaicius_biliete);
+		skaiciu_eile2.push(sk);
+		irasymas.innerHTML = skaiciu_eile2[bilieto_skaicius];
+	}
+	bilieto_skaicius = 0;
+}
+
+function bilieto_valymas() {
+
+	for (kamuoliukas; kamuoliukas < 6; kamuoliukas++) {
+		document.getElementById(kamuoliukas+101).innerHTML = ' ';
+	}
+	kamuoliukas = 0;
+}
+
+function ridenimas() {
+	kamuoliuko_nr();
+	if (skaiciu_eile.length < 6) {
+		generatorius();
+
+		for (a=0; a<=9; ++a) {
 			document.getElementById(a).style.backgroundColor = "powderblue";
+		}
+
+		document.getElementById(cell).style.backgroundColor = random_color();
+		document.getElementById('laimingas_skaicius').innerHTML = cell;
+		var numeris = document.getElementById("numeris");
+		numeris.style.backgroundColor = random_color();
+
+		var kamuoliuko_vieta = kamuoliukas+100;
+		var sarasas = document.getElementById(kamuoliuko_vieta);
+		skaiciu_eile.push(cell);
+		sarasas.innerHTML = skaiciu_eile[kamuoliukas-1];
+		if (kamuoliukas == 6) {
+			document.getElementById('ridenimas').innerHTML = 'Tikrinti bilietą';
+		} else {
+			document.getElementById('ridenimas').innerHTML = 'Ridenam kamuoliuką!';
+		}
+		console.log(kamuoliukas);
+
+	} else {
+		if (skaiciu_eile2 == skaiciu_eile) {
+			document.getElementById("pranesimas").innerHTML = 'Žaidimas baigas. Sveikiname, Jūs laimėjote!!!';
+		} else {
+			document.getElementById("pranesimas").innerHTML = 'Žaidimas baigas. Deja Jūs nelaimėjote.';
+		}
+
+		hidden = true;
+		hide_button();
+		console.log(kamuoliukas);
 	}
-	document.getElementById(cell).style.backgroundColor = random_color();
-	document.getElementById('laimingas_skaicius').innerHTML = cell;
+}
+
+function naujas_zaidimas() {
+	kamuoliukas = 0;
+	document.getElementById('ridenimas').innerHTML = 'Ridenam kamuoliuką!';
+				document.getElementById("pranesimas").innerHTML = 'Sėkmės!';
+	hidden = false;
+	hide_button()
+	skaiciu_eile.length = 0;
+	skaiciu_eile2.length = 0;
+	bilieto_valymas();
+	bilieto_generatorius();
+	console.log(hidden);
 }
 function random_color() {
 	var a = Math.floor(Math.random()*256);

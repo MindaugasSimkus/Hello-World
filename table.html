@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="js/script.js"></script>
-    <div w3-include-html="content.html"></div>
+    <script src="js/script.js">
+    </script>
+    <div w3-include-html="content.html">
+    </div>
   </head>
-  <body>
+  <body id="loto">
+    <body onload="hide_button()">
+    <body onload="hide_cheat_mode()">
     <div class="container">
       <div class="row">
         <div class="col-md-12 nav">
@@ -60,96 +64,167 @@
           </ul>
         </div>
       </div>
-        <div class="row">
-          <div class="col-md-12 centerblock">
 
-
-            <br/>
-            <br/>
- 
-
-            <p id="atsitiktinis_skaicius3">
-              Žalias langelis:
-            </p>
-          </div>
+      <div class="row">
+        <div class="col-md-4 center-block">
+          <br/>
+          <br/>
+          <p id="bilieto numeris">
+            Jūsų laimingi skaičiai:
+          </p>
+          <p id="sarasas2">
+            <ul class="saras">
+              <li id="201">
+              </li>
+              <li id="202">
+              </li>
+              <li id="203">
+              </li>
+              <li id="204">
+              </li>
+              <li id="205">
+              </li>
+              <li id="206">
+              </li>                
+            </ul>
+          </p>
         </div>
-          <div class="row">
-            <div id="0", class="col-md-1 centerblock">
-              <p>0</p>
-            </div>
 
-            <div id="1", class="col-md-1 centerblock">
-              <p>1</p>
-            </div>
-
-            <div id="2", class="col-md-1 centerblock">
-              <p>2</p>
-            </div>
-
-            <div id="3", class="col-md-1 centerblock">
-              <p>3</p>
-            </div>
-
-            <div id="4", class="col-md-1 centerblock">
-              <p>4</p>
-            </div>
-
-            <div id="5", class="col-md-1 centerblock">
-              <p>5</p>
-            </div>
-
-            <div id="6", class="col-md-1 centerblock">
-              <p>6</p>
-            </div>
-
-            <div id="7", class="col-md-1 centerblock">
-              <p>7</p>
-            </div>
-
-            <div id="8", class="col-md-1 centerblock">
-              <p>8</p>
-            </div>
-
-            <div id="9", class="col-md-1 centerblock">
-              <p>9</p>
-            </div>
-
-        <div class="row">
-          <div class="col-md-3 centerblock">
-            <p>
-              Laimingas skaičius:
-            </p>
-            <p id="laimingas_skaicius" class="laims">
-            
-            </p>
-          </div>
-
-          <div class="col-md-3 centerblock">
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <button onclick="random_cell()">Atsitiktinis</button>
-            <button onclick="next_cell()">Iš eilės</button>
-
-          </div>
-
-          
-          <div class="col-md-3 centerblock" id="numeris">
-            <p id="sarasas">
-              
-            </p>
-           
-            
-
-          </div>
-
-
-
+        <div class="col-md-4 center-block" id="cheater" >
+          <br/>
+          <br/>
+          <p class="center-block">
+            Naudoti tik praradus viltį...
+          </p>
+            <button id="cheat_button", class="center-block", onclick="ridenimas()">Cheat mode on
+            </button>
+          </p>
         </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 center-block">
+          <br/>
+          <br/>
+          <p id="atsitiktinis_skaicius3">
+            Kamuoliukų numeriai
+          </p>
         </div>
       </div>
+
+      <div class="row">
+        <div id="0", class="col-md-1 center-block border numberblock">
+          <p>0
+          </p>
+        </div>
+        <div id="1", class="col-md-1 center-block border numberblock">
+          <p>1
+          </p>
+        </div>
+        <div id="2", class="col-md-1 center-block border numberblock">
+          <p>2
+          </p>
+        </div>
+        <div id="3", class="col-md-1 center-block border numberblock">
+          <p>3
+          </p>
+        </div>
+        <div id="4", class="col-md-1 center-block border numberblock">
+          <p>4
+          </p>
+        </div>
+        <div id="5", class="col-md-1 center-block border numberblock">
+          <p>5
+          </p>
+        </div>
+        <div id="6", class="col-md-1 center-block border numberblock">
+          <p>6
+          </p>
+        </div>
+        <div id="7", class="col-md-1 center-block border numberblock">
+          <p>7
+          </p>
+        </div>
+        <div id="8", class="col-md-1 center-block border numberblock">
+          <p>8
+          </p>
+        </div>
+        <div id="9", class="col-md-1 center-block border numberblock">
+          <p>9
+          </p>
+        </div>
+
+        <div class="row">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 center-block border">
+            <p class="center-block">
+              Laimingas skaičius:
+            </p>
+            <p id="laimingas_skaicius" class="laims center-block">
+            </p>
+          </div>
+          <div class="col-md-3 center-block" id="numeris">
+            <p id="sarasas">
+              <ul class="saras">
+                <li id="101">
+
+                </li>
+                <li id="102">
+
+                </li>
+                <li id="103">
+
+                </li>
+                <li id="104">
+
+                </li>
+                <li id="105">
+
+                </li>
+                <li id="106">
+
+                </li>                
+              </ul>
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 center-block text-center">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <button id="ridenimas", onclick="ridenimas()">Ridenam kamuoliuką!
+            </button>
+            <button onclick="naujas_zaidimas()">Naujas žaidimas
+            </button>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 center-block text-center pranesimas" id="pranesimas">
+            <p>
+              Sėkmės!
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
     </div>
   </body>
 </html>
