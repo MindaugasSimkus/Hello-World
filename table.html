@@ -16,93 +16,6 @@
     <body onload="hide_button(), hide_cheat_mode()">
      <div class="container">
       <div class="row">
-        <div class="col-md-12 nav">
-          <ul>
-            <li>
-              <a href="1psl.html">
-                <ins>First page
-                </ins>
-              </a>
-            </li>
-            <li>
-              <a href="2psl.html">
-                <ins>Second page
-                </ins>
-              </a>
-            </li>
-            <li>
-              <a href="3psl.html">
-                <ins>Third page
-                </ins>
-              </a>
-            </li>
-            <li>
-              <a href="javascript.html">
-                <ins>JS
-                </ins>
-              </a>
-            </li>
-            <li>
-              <a href="index.html">
-                <ins>Pradinis
-                </ins>
-              </a>
-            </li>
-            <li>
-              <a href="jslentele.html">
-                <ins>jslentele
-                </ins>
-              </a>
-            </li>
-            <li>
-              <a href="jslentele2var.html">
-                <ins>jslenteleV2
-                </ins>
-              </a>
-            </li>            
-          </ul>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-4 center-block">
-          <br/>
-          <br/>
-          <p id="bilieto numeris">
-            Jūsų laimingi skaičiai:
-          </p>
-          <p id="sarasas2">
-            <ul class="saras">
-              <li id="201">
-              </li>
-              <li id="202">
-              </li>
-              <li id="203">
-              </li>
-              <li id="204">
-              </li>
-              <li id="205">
-              </li>
-              <li id="206">
-              </li>                
-            </ul>
-          </p>
-        </div>
-
-        <div class="col-md-4 center-block", id="cheater">
-          <br/>
-          <br/>
-          <p class="center-block">
-            Naudoti tik praradus viltį...
-          </p>
-            <button class="center-block", onclick="cheat()">Cheat mode on
-            </button>
-          </p>
-        </div>
-
-      </div>
-
-      <div class="row">
         <div class="col-md-12 center-block">
           <br/>
           <br/>
@@ -113,6 +26,10 @@
       </div>
 
       <div class="row">
+        <div class="col-md-1 center-block">
+          <p>
+          </p>
+        </div>
         <div id="0", class="col-md-1 center-block border numberblock">
           <p>0
           </p>
@@ -169,31 +86,60 @@
             <p id="laimingas_skaicius" class="laims center-block">
             </p>
           </div>
-          <div class="col-md-3 center-block" id="numeris">
-            <p id="sarasas">
-              <ul class="saras">
-                <li id="101">
 
-                </li>
-                <li id="102">
+          <div class="col-md-3 center-block border">
 
-                </li>
-                <li id="103">
+            <div class="row">
+              <div class="col-md-12 center-block" id="numeris">
+                <br/>
+                <p id="bilieto numeris">
+                  Iškritę kamuoliukai:
+                </p>
+                <p id="sarasas">
+                  <ul class="saras">
+                    <li id="101">
+                    </li>
+                    <li id="102">
+                    </li>
+                    <li id="103">
+                    </li>
+                    <li id="104">
+                    </li>
+                    <li id="105">
+                    </li>
+                    <li id="106">
+                    </li>                
+                  </ul>
+                </p>
+              </div>
+            </div>
 
-                </li>
-                <li id="104">
-
-                </li>
-                <li id="105">
-
-                </li>
-                <li id="106">
-
-                </li>                
-              </ul>
-            </p>
+            <div class="row">
+              <div class="col-md-12 center-block">
+                <br/>
+                <br/>
+                <p id="bilieto numeris">
+                  Jūsų bilieto numeris:
+                </p>
+                <p id="sarasas2">
+                  <ul class="saras">
+                    <li id="201">
+                    </li>
+                    <li id="202">
+                    </li>
+                    <li id="203">
+                    </li>
+                    <li id="204">
+                    </li>
+                    <li id="205">
+                    </li>
+                    <li id="206">
+                    </li>                
+                  </ul>
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
 
         <div class="row">
           <div class="col-md-12 center-block text-center">
@@ -206,6 +152,30 @@
             </button>
             <button onclick="naujas_zaidimas()">Naujas žaidimas
             </button>
+          </div>
+        </div>
+      </div>
+
+        <div clas="row">
+          <div class="col-md-12 center-block text-center", id="cheater">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <p class="center-block">
+              Naudoti tik praradus viltį...
+            </p>
+            <p class = "btn-group">
+              <button class="center-block btn-group", onclick="hide1 = false; hide_cheat_mode1()">Cheat mode on
+              </button>
+              <button class="center-block btn-group", id="cheater1", onclick="hide2 = false; hide_cheat_mode2()">Are you sure?
+              </button>
+              <button class="center-block btn-group", id="cheater2", onclick="hide3 = false; hide_cheat_mode3()">But that's illegal!
+              </button>
+              <button class="center-block btn-group", id="cheater3", onclick="cheat()">Cheat...
+              </button>
+            </p>
             <br/>
             <br/>
             <br/>

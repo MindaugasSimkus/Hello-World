@@ -100,6 +100,9 @@ var kamuoliukas = 0;
 var bilieto_skaicius = 0;
 var hidden = true;
 var hide = true;
+var hide1 = true;
+var hide2 = true;
+var hide3 = true;
 
 function hide_button() {
 	if (hidden) {
@@ -117,6 +120,29 @@ function hide_cheat_mode() {
 	}
 }
 
+function hide_cheat_mode1() {
+	if (hide1) {
+		document.getElementById('cheater1').style.visibility = 'hidden';
+	} else {
+		document.getElementById('cheater1').style.visibility = 'visible';
+	}
+}
+
+function hide_cheat_mode2() {
+	if (hide2) {
+		document.getElementById('cheater2').style.visibility = 'hidden';
+	} else {
+		document.getElementById('cheater2').style.visibility = 'visible';
+	}
+}
+
+function hide_cheat_mode3() {
+	if (hide3) {
+		document.getElementById('cheater3').style.visibility = 'hidden';
+	} else {
+		document.getElementById('cheater3').style.visibility = 'visible';
+	}
+}
 
 function kamuoliuko_nr() {
 	kamuoliukas = ++kamuoliukas;
@@ -165,7 +191,6 @@ function ridenimas() {
 		document.getElementById(cell).style.backgroundColor = random_color();
 		document.getElementById('laimingas_skaicius').innerHTML = cell;
 		var numeris = document.getElementById("numeris");
-		numeris.style.backgroundColor = random_color();
 
 		var kamuoliuko_vieta = kamuoliukas+100;
 		var sarasas = document.getElementById(kamuoliuko_vieta);
@@ -175,6 +200,9 @@ function ridenimas() {
 			document.getElementById('ridenimas').innerHTML = 'Tikrinti bilietą';
 			hide = false;
 			hide_cheat_mode();
+			hide_cheat_mode1();
+			hide_cheat_mode2();
+			hide_cheat_mode3();
 		} else {
 			document.getElementById('ridenimas').innerHTML = 'Ridenam kamuoliuką!';
 		}
@@ -198,14 +226,19 @@ function naujas_zaidimas() {
 	hidden = false;
 	hide_button();
 	hide = true;
+	hide1 = true;
+	hide2 = true;
+	hide3 = true;
 	hide_cheat_mode();
+	hide_cheat_mode1();
+	hide_cheat_mode2();
+	hide_cheat_mode3();
 	skaiciu_eile = [];
 	skaiciu_eile2 = [];
 	skaiciu_eile.length = 0;
 	skaiciu_eile2.length = 0;
 	bilieto_valymas();
 	bilieto_generatorius();
-	console.log(cheater);
 }
 
 function cheat() {
