@@ -99,7 +99,7 @@ var skaiciu_eile2 = [];
 var kamuoliukas = 0;
 var bilieto_skaicius = 0;
 var hidden = true;
-var hidden2 = true;
+var hide = true;
 
 function hide_button() {
 	if (hidden) {
@@ -110,12 +110,13 @@ function hide_button() {
 }
 
 function hide_cheat_mode() {
-	if (hidden2) {
+	if (hide) {
 		document.getElementById('cheater').style.visibility = 'hidden';
 	} else {
 		document.getElementById('cheater').style.visibility = 'visible';
 	}
 }
+
 
 function kamuoliuko_nr() {
 	kamuoliukas = ++kamuoliukas;
@@ -172,10 +173,11 @@ function ridenimas() {
 		sarasas.innerHTML = skaiciu_eile[kamuoliukas-1];
 		if (kamuoliukas == 6) {
 			document.getElementById('ridenimas').innerHTML = 'Tikrinti bilietą';
+			hide = false;
+			hide_cheat_mode();
 		} else {
 			document.getElementById('ridenimas').innerHTML = 'Ridenam kamuoliuką!';
 		}
-		console.log(kamuoliukas);
 
 	} else {
 		if (skaiciu_eile2 == skaiciu_eile) {
@@ -186,22 +188,37 @@ function ridenimas() {
 
 		hidden = true;
 		hide_button();
-		console.log(kamuoliukas);
 	}
 }
 
 function naujas_zaidimas() {
 	kamuoliukas = 0;
 	document.getElementById('ridenimas').innerHTML = 'Ridenam kamuoliuką!';
-				document.getElementById("pranesimas").innerHTML = 'Sėkmės!';
+	document.getElementById("pranesimas").innerHTML = 'Sėkmės!';
 	hidden = false;
-	hide_button()
+	hide_button();
+	hide = true;
+	hide_cheat_mode();
+	skaiciu_eile = [];
+	skaiciu_eile2 = [];
 	skaiciu_eile.length = 0;
 	skaiciu_eile2.length = 0;
 	bilieto_valymas();
 	bilieto_generatorius();
-	console.log(hidden);
+	console.log(cheater);
 }
+
+function cheat() {
+	skaiciu_eile2 = skaiciu_eile;
+	document.getElementById('201').innerHTML = skaiciu_eile2[0];
+	document.getElementById('202').innerHTML = skaiciu_eile2[1];
+	document.getElementById('203').innerHTML = skaiciu_eile2[2];
+	document.getElementById('204').innerHTML = skaiciu_eile2[3];
+	document.getElementById('205').innerHTML = skaiciu_eile2[4];
+	document.getElementById('206').innerHTML = skaiciu_eile2[5];
+
+}
+
 function random_color() {
 	var a = Math.floor(Math.random()*256);
 	var b = Math.floor(Math.random()*256);

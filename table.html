@@ -13,9 +13,8 @@
     </div>
   </head>
   <body id="loto">
-    <body onload="hide_button()">
-    <body onload="hide_cheat_mode()">
-    <div class="container">
+    <body onload="hide_button(), hide_cheat_mode()">
+     <div class="container">
       <div class="row">
         <div class="col-md-12 nav">
           <ul>
@@ -90,13 +89,13 @@
           </p>
         </div>
 
-        <div class="col-md-4 center-block" id="cheater" >
+        <div class="col-md-4 center-block", id="cheater">
           <br/>
           <br/>
           <p class="center-block">
             Naudoti tik praradus viltį...
           </p>
-            <button id="cheat_button", class="center-block", onclick="ridenimas()">Cheat mode on
+            <button class="center-block", onclick="cheat()">Cheat mode on
             </button>
           </p>
         </div>
