@@ -103,7 +103,6 @@ var hide = true;
 var hide1 = true;
 var hide2 = true;
 var hide3 = true;
-
 function hide_button() {
 	if (hidden) {
 		document.getElementById('ridenimas').style.visibility = 'hidden';
@@ -111,7 +110,6 @@ function hide_button() {
 		document.getElementById('ridenimas').style.visibility = 'visible';
 	}
 }
-
 function hide_cheat_mode() {
 	if (hide) {
 		document.getElementById('cheater').style.visibility = 'hidden';
@@ -119,7 +117,6 @@ function hide_cheat_mode() {
 		document.getElementById('cheater').style.visibility = 'visible';
 	}
 }
-
 function hide_cheat_mode1() {
 	if (hide1) {
 		document.getElementById('cheater1').style.visibility = 'hidden';
@@ -127,7 +124,6 @@ function hide_cheat_mode1() {
 		document.getElementById('cheater1').style.visibility = 'visible';
 	}
 }
-
 function hide_cheat_mode2() {
 	if (hide2) {
 		document.getElementById('cheater2').style.visibility = 'hidden';
@@ -135,7 +131,6 @@ function hide_cheat_mode2() {
 		document.getElementById('cheater2').style.visibility = 'visible';
 	}
 }
-
 function hide_cheat_mode3() {
 	if (hide3) {
 		document.getElementById('cheater3').style.visibility = 'hidden';
@@ -143,24 +138,19 @@ function hide_cheat_mode3() {
 		document.getElementById('cheater3').style.visibility = 'visible';
 	}
 }
-
 function kamuoliuko_nr() {
 	kamuoliukas = ++kamuoliukas;
 	return kamuoliukas;
 }
-
 function generatorius() {
 	cell = Math.floor(Math.random()*10);
 	return cell;
 }
-
 function generatorius_sk() {
 	sk = Math.floor(Math.random()*10);
 	return sk;
 }
-
 function bilieto_generatorius() {
-
 	for (bilieto_skaicius; bilieto_skaicius < 6; bilieto_skaicius++) {
 		generatorius_sk();
 		var skaicius_biliete = bilieto_skaicius+201;
@@ -170,24 +160,19 @@ function bilieto_generatorius() {
 	}
 	bilieto_skaicius = 0;
 }
-
 function bilieto_valymas() {
-
 	for (kamuoliukas; kamuoliukas < 6; kamuoliukas++) {
 		document.getElementById(kamuoliukas+101).innerHTML = ' ';
 	}
 	kamuoliukas = 0;
 }
-
 function ridenimas() {
 	kamuoliuko_nr();
 	if (skaiciu_eile.length < 6) {
 		generatorius();
-
 		for (a=0; a<=9; ++a) {
 			document.getElementById(a).style.backgroundColor = "powderblue";
 		}
-
 		document.getElementById(cell).style.backgroundColor = random_color();
 		document.getElementById('laimingas_skaicius').innerHTML = cell;
 		var numeris = document.getElementById("numeris");
@@ -206,7 +191,6 @@ function ridenimas() {
 		} else {
 			document.getElementById('ridenimas').innerHTML = 'Ridenam kamuoliuką!';
 		}
-
 	} else {
 		if (skaiciu_eile2 == skaiciu_eile) {
 			document.getElementById("pranesimas").innerHTML = 'Žaidimas baigas. Sveikiname, Jūs laimėjote!!!';
@@ -229,12 +213,10 @@ function ridenimas() {
 			hide_cheat_mode2();
 			hide_cheat_mode3()		
 		}
-
 		hidden = true;
 		hide_button();
 	}
 }
-
 function naujas_zaidimas() {
 	kamuoliukas = 0;
 	document.getElementById('ridenimas').innerHTML = 'Ridenam kamuoliuką!';
@@ -248,7 +230,6 @@ function naujas_zaidimas() {
 	bilieto_valymas();
 	bilieto_generatorius();
 }
-
 function cheat() {
 	skaiciu_eile2 = skaiciu_eile;
 	document.getElementById('201').innerHTML = skaiciu_eile2[0];
@@ -257,15 +238,13 @@ function cheat() {
 	document.getElementById('204').innerHTML = skaiciu_eile2[3];
 	document.getElementById('205').innerHTML = skaiciu_eile2[4];
 	document.getElementById('206').innerHTML = skaiciu_eile2[5];
-
 }
-
 function random_color() {
 	var a = Math.floor(Math.random()*256);
 	var b = Math.floor(Math.random()*256);
 	var c = Math.floor(Math.random()*256);
-
 	return ["rgb(",a,",",b,",",c,")"].join("");
 }
 //namie max 6 sk gali iskrist ir iskritus 6 skaiciams turi matytis pranesimas, jog zaidimas baigas. Viskas bootsrap'e. 
 //Dar mygtukas "naujas zaidimas". paspaudus naujas zaidimas, turi susigeneruot naujas bilieto numeris is 6sk. (laimingi skaiciai)  ir juos islaiko iki zaidimo pabaigos.
+//&nbsp - tarpas
