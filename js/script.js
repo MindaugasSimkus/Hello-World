@@ -210,8 +210,24 @@ function ridenimas() {
 	} else {
 		if (skaiciu_eile2 == skaiciu_eile) {
 			document.getElementById("pranesimas").innerHTML = 'Žaidimas baigas. Sveikiname, Jūs laimėjote!!!';
+			hide = true;
+			hide1 = true;
+			hide2 = true;
+			hide3 = true;
+			hide_cheat_mode();
+			hide_cheat_mode1();
+			hide_cheat_mode2();
+			hide_cheat_mode3();
 		} else {
 			document.getElementById("pranesimas").innerHTML = 'Žaidimas baigas. Deja Jūs nelaimėjote.';
+			hide = true;
+			hide1 = true;
+			hide2 = true;
+			hide3 = true;
+			hide_cheat_mode();
+			hide_cheat_mode1();
+			hide_cheat_mode2();
+			hide_cheat_mode3()		
 		}
 
 		hidden = true;
@@ -225,14 +241,6 @@ function naujas_zaidimas() {
 	document.getElementById("pranesimas").innerHTML = 'Sėkmės!';
 	hidden = false;
 	hide_button();
-	hide = true;
-	hide1 = true;
-	hide2 = true;
-	hide3 = true;
-	hide_cheat_mode();
-	hide_cheat_mode1();
-	hide_cheat_mode2();
-	hide_cheat_mode3();
 	skaiciu_eile = [];
 	skaiciu_eile2 = [];
 	skaiciu_eile.length = 0;

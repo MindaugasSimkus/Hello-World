@@ -79,7 +79,9 @@
         </div>
 
         <div class="row">
-          <div class="col-md-3 center-block border">
+          <div class="col-md-3 center-block">
+          </div>
+          <div class="col-md-3 center-block">
             <p class="center-block">
               Laimingas skaičius:
             </p>
@@ -87,7 +89,7 @@
             </p>
           </div>
 
-          <div class="col-md-3 center-block border">
+          <div class="col-md-3 center-block">
 
             <div class="row">
               <div class="col-md-12 center-block" id="numeris">
@@ -148,9 +150,9 @@
             <br/>
             <br/>
             <br/>
-            <button id="ridenimas", onclick="ridenimas()">Ridenam kamuoliuką!
+            <button id="ridenimas", class="btn btn-success", onclick="ridenimas()">Ridenam kamuoliuką!
             </button>
-            <button onclick="naujas_zaidimas()">Naujas žaidimas
+            <button class="btn btn-primary", onclick="naujas_zaidimas()">Naujas žaidimas
             </button>
           </div>
         </div>
@@ -167,13 +169,13 @@
               Naudoti tik praradus viltį...
             </p>
             <p class = "btn-group">
-              <button class="center-block btn-group", onclick="hide1 = false; hide_cheat_mode1()">Cheat mode on
+              <button class="center-block btn-group btn btn-warning", onclick="hide1 = false; hide_cheat_mode1()">Cheat mode on
               </button>
-              <button class="center-block btn-group", id="cheater1", onclick="hide2 = false; hide_cheat_mode2()">Are you sure?
+              <button class="center-block btn-group btn btn-warning", id="cheater1", onclick="hide2 = false; hide_cheat_mode2()">Are you sure?
               </button>
-              <button class="center-block btn-group", id="cheater2", onclick="hide3 = false; hide_cheat_mode3()">But that's illegal!
+              <button class="center-block btn-group btn btn-warning", id="cheater2", onclick="hide3 = false; hide_cheat_mode3()">But that's illegal!
               </button>
-              <button class="center-block btn-group", id="cheater3", onclick="cheat()">Cheat...
+              <button class="center-block btn-group btn btn-danger", id="cheater3", onclick="cheat()">Cheat...
               </button>
             </p>
             <br/>
