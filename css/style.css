@@ -129,10 +129,11 @@ h3 {
   margin:0 auto;
 }
 .laims {
-  font-size: 150px;
+  font-size: 130px;
   width:200px;
   height:200px;
-  background-color: yellow;
+  background-color: gold;
+  opacity: 0.8;
 }
 .saras {
   text-align:center;
